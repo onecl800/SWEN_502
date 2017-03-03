@@ -1,0 +1,105 @@
+/* HEADER: banner image, blog title, top link buttons */
+/* banner to take up top of page, with links underneath. Fixed to top left corner */
+
+
+.header img {
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+#banner {
+    resize: both;
+    max-width: 100%;
+    height: auto;
+}
+
+.header h1, h2 {
+    position: relative;
+    top: 160pt;
+    font-size: 80pt;
+    font-family: "times new roman";
+    text-align: center;
+    
+}
+
+.header h2 {
+    font-size: 30pt;
+    margin-top: -40pt;
+}
+
+.buttons {
+    position: relative;
+    top: 150pt;
+}
+
+
+
+/* SIDEBAR: image, about me, list of links */
+/* fixed to side of page, below banner */
+
+
+.sidebar {
+    position: sticky;
+    left: 0;
+    top: 50pt;
+    width: 200pt;
+    background: white;
+    padding-left: 5pt;
+    padding-right: 5pt;
+}
+
+.sidebar h6 {
+    text-align: center;
+    font-size: 20pt;
+    font-family: sans-serif;
+    margin-top: 20pt;
+    margin-bottom: 20pt;
+}
+
+
+
+#myface {
+    border-radius: 50%;
+    border-color: black;
+    border-width: 2px;
+    border-style: solid;
+    display: block;
+    margin-left: auto;
+    margin-right: auto; 
+}
+
+#myface {
+    padding-top: 20pt;
+}
+
+.sidebar p {
+    text-align: justify;
+    padding: 10pt;
+}
+
+
+
+
+/* CONTENT: post title, post date, paragraphs, images with captions */
+/* need to add more text */
+
+.content {
+    position: relative;
+    top: 150pt;
+    left: 250pt;
+    width: 1000pt;
+}
+
+.photos figcaption {
+    text-align: center;
+    padding-top: 5pt;
+    padding-bottom: 10pt;
+}
+
+.photos img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto; 
+    margin-left: 100pt;
+}

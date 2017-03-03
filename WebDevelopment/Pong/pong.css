@@ -1,0 +1,46 @@
+ 
+#area { 
+    border: 1px solid black;
+    width: 500px;
+    height: 500px;
+    background: "grey";
+}
+
+#score {
+    font-size: 72pt;
+}
+
+#leftPaddle {
+    height: 100px;
+    width:20px;
+    background: "white";
+    position: absolute;
+}
+
+#ball {
+    height: 20px;
+    width: 20px;
+    background: "blue";
+    position: absolute;
+    top: 240px;
+    left: 240px;
+}
+
+
+/* have a menu show up when you hover over a word */
+#menu {
+    list-style-type: none;
+}
+
+#menu > li {
+    float: left;
+    padding: 10px;
+}
+
+#menu > li ul {
+    display: none;
+}
+
+#menu > li:hover ul {
+    display: block;
+}

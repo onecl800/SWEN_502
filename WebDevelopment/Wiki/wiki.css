@@ -1,0 +1,94 @@
+/* TOP BAR */
+/* dropdown log in button */
+
+.topBar {
+    position: relative;
+}
+
+
+#signIn {
+    display: none;
+}
+
+
+/* HEADER */
+/* image with title and subtitle */
+.header img {
+    position: relative;
+    top: 15pt;
+    left: 0;
+    width: 100%;
+}
+
+
+/* SIDE BAR */
+/* about/navigation/search form */
+
+.sidebar {
+    position: relative;
+    top: 50pt;
+    left: 0;
+    width: 200pt;
+    background: grey;
+    padding: 5pt;
+}
+
+.sidebar h6 {
+    text-align: left;
+    font-size: 15pt;
+    font-family: sans-serif;
+    margin-top: 5pt;
+    margin-bottom: 5pt;
+}
+
+.sidebar p {
+    text-align: justify;
+    padding: 10pt;
+} 
+
+
+.sidebar ul {
+    list-style: none;
+    margin: 0;
+    padding-left: 10pt;
+    padding-bottom: 25pt;
+}
+
+/* CONTENT AREA */
+/* content buttons, content, edit button */
+
+.contentArea {
+    position: relative;
+    margin-top: -270pt;
+    left: 250pt;
+    width: 1000pt;
+}
+
+.contentArea h4 {
+    font-size: 20pt;
+}
+
+.contentArea h5 {
+    font-size: 14pt;
+    margin-bottom: -2pt;
+}
+
+.contentArea h6 {
+    font-size: 12pt;
+    margin-bottom: -2pt;
+}
+
+
+.editButton {
+   position: absolute;
+   right: 0;
+   padding-bottom: 20pt;
+}
+
+#dscnPost {
+    font-size: 10pt;
+}
+
+#home {
+    display: none;
+}
