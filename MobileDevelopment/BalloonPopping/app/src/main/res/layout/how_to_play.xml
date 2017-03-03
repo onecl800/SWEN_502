@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent">
+
+    <TextView
+        android:text="How to play the game"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="35dp"
+        android:layout_marginTop="24dp"
+        android:id="@+id/howToTitle"
+        android:textSize="30sp"
+        android:textStyle="normal|bold" />
+
+    <TextView
+        android:text="The balloon popping game is played by popping the balloons as they appear on screen. If you don't understand this withouth reading this how to then you're a dummy"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="33dp"
+        android:id="@+id/howToText"
+        android:textSize="18sp"
+        android:textAlignment="textStart"
+        android:layout_width="wrap_content"
+        android:layout_below="@+id/howToTitle"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="21dp" />
+
+    <Button
+        android:text="OK"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="32dp"
+        android:id="@+id/howToToMain" />
+</RelativeLayout>

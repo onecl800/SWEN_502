@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent" android:layout_height="match_parent"
+    >
+
+    <Button
+        android:text="Return to Main menu"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/colourMain"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="64dp" />
+
+    <Button
+        android:text="Play Again"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/replayColour"
+        android:layout_alignBottom="@+id/colourMain"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="76dp" />
+
+    <TextView
+        android:text="Congratulations, you guessed the correct colour!"
+        android:layout_height="wrap_content"
+        android:id="@+id/colorOutcome"
+        android:textSize="24sp"
+        android:layout_width="350dp"
+        android:textAllCaps="false"
+        android:layout_marginBottom="55dp"
+        android:textAlignment="center"
+        android:layout_above="@+id/replayColour"
+        android:layout_centerHorizontal="true" />
+
+    <TextView
+        android:text="Random colour"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="52dp"
+        android:id="@+id/randColor"
+        android:textSize="18sp"
+        android:layout_alignParentTop="true"
+        android:layout_alignStart="@+id/colorOutcome"
+        android:layout_marginStart="32dp" />
+
+    <TextView
+        android:layout_marginTop="25dp"
+        android:id="@+id/showRand"
+        android:layout_height="75dp"
+        android:layout_width="75dp"
+        android:layout_below="@+id/randColor"
+        android:layout_toStartOf="@+id/replayColour"
+        android:background="@android:color/holo_orange_light" />
+
+    <TextView
+        android:layout_width="75dp"
+        android:layout_height="75dp"
+        android:id="@+id/showYourColor"
+        tools:background="@android:color/holo_green_light"
+        android:layout_alignBaseline="@+id/showRand"
+        android:layout_alignBottom="@+id/showRand"
+        android:layout_toEndOf="@+id/replayColour" />
+
+    <TextView
+        android:text="Your Color"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/yourColor"
+        android:textSize="18sp"
+        android:layout_alignBaseline="@+id/randColor"
+        android:layout_alignBottom="@+id/randColor"
+        android:layout_alignEnd="@+id/showYourColor" />
+</RelativeLayout>

@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent">
+
+    <TextView
+        android:text="Settings"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="19dp"
+        android:id="@+id/settingsTitle"
+        android:textSize="36sp"
+        android:textStyle="normal|bold" />
+
+    <Button
+        android:text="OK"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="17dp"
+        android:id="@+id/settingsToMain" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Difficulty:"
+        android:id="@+id/textDiff"
+        android:textSize="24sp"
+        android:layout_weight="1"
+        android:layout_marginTop="25dp"
+        android:layout_below="@+id/settingsTitle"
+        android:layout_alignStart="@+id/settingsTitle" />
+
+    <RadioGroup
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textDiff"
+        android:id="@+id/radioGroup">
+
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/setDiffEasy"
+            android:text="Easy"
+            android:layout_above="@+id/setDiffMedium"
+            android:layout_alignEnd="@+id/setDiffHard" />
+
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/setDiffMedium"
+            android:text="Medium"
+            android:layout_centerVertical="true"
+            android:layout_alignParentStart="true" />
+
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/setDiffHard"
+            android:text="Hard"
+            android:layout_below="@+id/setDiffMedium"
+            android:layout_alignParentStart="true" />
+
+
+    </RadioGroup>
+
+    <TextView
+        android:text="Number of Balloons:"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/settingsTitle"
+        android:layout_below="@+id/radioGroup"
+        android:id="@+id/textNumBalloons"
+        android:textSize="24sp" />
+
+    <SeekBar
+        style="@style/Widget.AppCompat.SeekBar.Discrete"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:max="200"
+        android:progress="50"
+        android:layout_below="@+id/textNumBalloons"
+        android:layout_marginTop="22dp"
+        android:id="@+id/seekBar" />
+
+
+</RelativeLayout>

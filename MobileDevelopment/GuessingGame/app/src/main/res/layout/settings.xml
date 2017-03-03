@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:text="Minimum:"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="45dp"
+        android:id="@+id/setMin"
+        android:textSize="24sp"
+        android:layout_below="@+id/settingsTitle"
+        android:layout_alignStart="@+id/settingsTitle" />
+
+    <TextView
+        android:text="Settings"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/settingsTitle"
+        android:textSize="36sp"
+        android:layout_marginTop="20dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="28dp" />
+
+    <TextView
+        android:text="Maximum:"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="51dp"
+        android:id="@+id/setMax"
+        android:textSize="24sp"
+        android:layout_below="@+id/setMin"
+        android:layout_alignStart="@+id/setMin" />
+
+    <EditText
+        android:inputType="number"
+        android:ems="10"
+        android:id="@+id/userMin"
+        android:layout_height="wrap_content"
+        android:layout_width="100dp"
+        android:layout_marginStart="18dp"
+        android:layout_alignBaseline="@+id/setMin"
+        android:layout_alignBottom="@+id/setMin"
+        android:layout_toEndOf="@+id/settingsTitle"
+        android:textSize="24sp"
+        android:text="1" />
+
+    <TextView
+        android:text="Guesses:"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/setNumGuesses"
+        android:textSize="24sp"
+        android:layout_marginTop="52dp"
+        android:layout_below="@+id/setMax"
+        android:layout_alignStart="@+id/setMax" />
+
+    <EditText
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:id="@+id/userNumGuesses"
+        android:textSize="24sp"
+        android:layout_alignBaseline="@+id/setNumGuesses"
+        android:layout_alignBottom="@+id/setNumGuesses"
+        android:layout_alignStart="@+id/userMax"
+        android:text="10"
+        android:inputType="number" />
+
+    <EditText
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:id="@+id/userMax"
+        android:textSize="24sp"
+        android:layout_alignBaseline="@+id/setMax"
+        android:layout_alignBottom="@+id/setMax"
+        android:layout_alignStart="@+id/userMin"
+        android:text="100"
+        android:inputType="number" />
+
+    <Button
+        android:text="OK"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/userNumGuesses"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="59dp"
+        android:id="@+id/setSettings" />
+
+    <CheckBox
+        android:text="Save settings on closing application"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="23dp"
+        android:id="@+id/checkBox"
+        android:layout_width="500dp"
+        android:layout_below="@+id/userNumGuesses"
+        android:layout_alignStart="@+id/setNumGuesses"
+        android:layout_marginStart="10dp" />
+</RelativeLayout>
