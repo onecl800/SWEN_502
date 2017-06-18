@@ -24,7 +24,7 @@ public class AtbashCipherII {
 	
 	public void buildHashes(){
 
-		// get key from user
+		// get keyword and key from user
 		
 		Scanner scan = new Scanner(System.in);
 		
@@ -38,64 +38,77 @@ public class AtbashCipherII {
 		
 		scan.close();
 		
-		System.out.println(word);
-		// upper case letters for encryption
 		
-		for (int i = 65; i <= 90; i++)
+		// build word cipher (upper case)
+		
+		int j = 65;
+		
+		for (int i = 0; i < word.length(); i++)
 		{
-			if (i + key <= 90)
+			if (Character.isLetter(word.charAt(i)))
 			{
-				letters.put((char)i, (char)(i+key));
-			}
-			else
-			{
-				letters.put((char)i, (char)(i+key-26));
+				char key = Character.toUpperCase(word.charAt(i));
+				letters.put(key, (char)(j));
+				j++;
 			}
 		}
 		
 		
-		// lower case letters for encryption
+		// rest of upper case letters for encryption
+		
+		for (int i = 65; i <= 90; i++)
+		{
+			// check if key is already in the list (from the key word)
+			if (letters.containsKey((char)(i)))
+			{
+				continue;
+			}
+			else 
+			{
+				letters.put((char)i, (char)(j));
+				j++;		
+			}
+		}
+		
+		
+		// build word cipher (lower case)
+		
+		int k = 97;
+		
+		for (int i = 0; i < word.length(); i++)
+		{
+			if (Character.isLetter(word.charAt(i)))
+			{
+				char letter = Character.toLowerCase(word.charAt(i));
+				letters.put(letter, (char)(k));
+				k++;
+			}
+		}
+		
+		
+		// rest of lower case letters for encryption
 		
 		for (int i = 97; i <= 122; i++)
 		{
-			if (i + key <= 122)
+			if (letters.containsKey((char)i))
 			{
-				letters.put((char)i, (char)(i+key));
+				continue;
 			}
 			else
 			{
-				letters.put((char)i, (char)(i+key-26));
+				letters.put((char)i, (char)(k));
+				k++;
 			}
 		}
 		
 		
 		// upper case letters for decryption
 		
-		for (int i = 65; i <= 90; i++)
-		{
-			if (i - key >= 65)
-			{
-				reverseLetters.put((char)i, (char)(i-key));
-			}
-			else 
-			{
-				reverseLetters.put((char)i, (char)(i-key+26));
-			}
-		}
-		
-		
-		// lower case letters for decryption
-		
-		for (int i = 97; i <= 122; i++)
-		{
-			if (i - key >= 97)
-			{
-				reverseLetters.put((char)i, (char)(i-key));
-			}
-			else 
-			{
-				reverseLetters.put((char)i, (char)(i-key+26));
-			}
+		for (HashMap.Entry entry : letters.entrySet())
+		{	
+			char key = (char)entry.getKey();
+			char value = (char)entry.getValue();
+			reverseLetters.put(value, key);
 		}
 	}
 	

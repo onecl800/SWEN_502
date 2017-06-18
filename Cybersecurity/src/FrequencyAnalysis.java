@@ -102,7 +102,7 @@ public class FrequencyAnalysis {
 		}
 		
 		
-		// pair letters from text with letters by frequency in English language, desc
+		// pair letters from text with letters by frequency in English language, descending
 		
 		int j = 0;
 		
